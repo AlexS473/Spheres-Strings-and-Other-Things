@@ -740,10 +740,10 @@ public class Code extends JFrame implements GLEventListener, KeyListener
 
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode()==KeyEvent.VK_RIGHT){
-			roty+= 0.1f;
+			roty-= 0.1f;
 		}
 		if (e.getKeyCode()==KeyEvent.VK_LEFT){
-			roty-= 0.1f;
+			roty+= 0.1f;
 		}
 		if (e.getKeyCode()==KeyEvent.VK_A){
 			angle+= 15;
