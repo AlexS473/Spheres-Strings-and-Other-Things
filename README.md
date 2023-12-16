@@ -30,7 +30,8 @@ The following Keys have functions:
 
 ### Known Bugs 
 - The depth of the objects sometimes get mixed up where the rotation is done slowly. For example, the spheres seem to overlap, the frames cross each other.
-- The Shadows are mapped incorrectly, I think I didn't use the correct values for the look at matrix but I don't have enough time to fix it.
-
+- The Shadows are mapped incorrectly, I think I didn't use the correct values for the look at matrix.
+- The shadow also moves when the view is rotated. 
+- (Kind of, but not really) If one of the keys to lift or release the spheres is pressed at the 'wrong' time there's a little lag before movement or extra movement. This is because I refuse to sync the time factor with the key events. I think it's fine as is. 
 ### Isn't a bug, is a feature 
 - The 'iceburg' is a little mountainous, so it seems to cast its own shadows. 
