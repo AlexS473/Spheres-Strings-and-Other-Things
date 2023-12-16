@@ -30,4 +30,7 @@ The following Keys have functions:
 
 ### Known Bugs 
 - The depth of the objects sometimes get mixed up where the rotation is done slowly. For example, the spheres seem to overlap, the frames cross each other.
+- The Shadows are mapped incorrectly, I think I didn't use the correct values for the look at matrix but I don't have enough time to fix it.
 
+### Isn't a bug, is a feature 
+- The 'iceburg' is a little mountainous, so it seems to cast its own shadows. 
