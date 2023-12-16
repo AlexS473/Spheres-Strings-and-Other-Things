@@ -1,3 +1,4 @@
+//922-05-0440 CS465 Project Fri/15th/12/2023
 #version 430
 
 layout (location = 0) in vec3 position;
@@ -5,6 +6,7 @@ layout (location = 1) in vec2 tex_coord;
 layout (location = 2) in vec3 normal;
 out vec2 tc;
 out vec4 varyingColor;
+out vec4 shadow_coord;
 
 struct PositionalLight
 {	vec4 ambient;
@@ -19,9 +21,11 @@ uniform mat4 m_matrix;
 uniform mat4 v_matrix;
 uniform mat4 p_matrix;
 uniform mat4 norm_matrix;
+uniform mat4 shadowMVP;
 
 uniform mat4 mv_matrix;
 layout (binding=0) uniform sampler2D s;
+layout (binding=1) uniform sampler2DShadow shadowTex;
 
 void main(void)
 {
@@ -58,4 +62,5 @@ void main(void)
 
 	gl_Position = p_matrix * mv_matrix * vec4(position,1.0);
 	tc = tex_coord;
+	shadow_coord = shadowMVP * vec4(position,1.0);
 }
