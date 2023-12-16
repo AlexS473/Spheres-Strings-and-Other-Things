@@ -29,9 +29,10 @@ The following Keys have functions:
 13. Space bar - Release spheres (start oscillation)
 
 ### Known Bugs 
-- The depth of the objects sometimes get mixed up where the rotation is done slowly. For example, the spheres seem to overlap, the frames cross each other.
+- The depth of the objects sometimes get mixed up where the rotation is done slowly. For example, the spheres seem to overlap, the frames cross each other. I think they're also rotating when the camera is rotating because everything's jumbled up in the Mv Stack. 
 - The Shadows are mapped incorrectly, I think I didn't use the correct values for the look at matrix.
 - The shadow also moves when the view is rotated. 
-- (Kind of, but not really) If one of the keys to lift or release the spheres is pressed at the 'wrong' time there's a little lag before movement or extra movement. This is because I refuse to sync the time factor with the key events. I think it's fine as is. 
+- (Kind of, but not really) If one of the keys to lift or release the spheres is pressed at the 'wrong' time there's a little lag before movement or extra movement. This is because I refuse to sync the time factor with the key events. I think it's fine as is.
+
 ### Isn't a bug, is a feature 
 - The 'iceburg' is a little mountainous, so it seems to cast its own shadows. 
